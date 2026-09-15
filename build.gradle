@@ -168,7 +168,10 @@ dependencies {
     localRuntime "curse.maven:ars-nouveau-401955:8721482"
     implementation "curse.maven:curios-309927:6529130"
     implementation "curse.maven:patchouli-306770:7730942"
-    implementation "curse.maven:tide-884685:8570111"
+    // Tide is an optional compatibility target. Keep its API visible to the
+    // compiler and add the full mod only to the local runtime for testing.
+    compileOnly "curse.maven:tide-884685:8570111"
+    localRuntime "curse.maven:tide-884685:8570111"
     implementation "curse.maven:cloth-config-348521:5729127"
 
 

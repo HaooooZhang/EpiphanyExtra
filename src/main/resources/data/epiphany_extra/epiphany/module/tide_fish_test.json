@@ -1,0 +1,13 @@
+{
+  "name": "Tide 鱼类捕获测试",
+  "description": "实际捕获 Tide 的 Carp 后自动解锁，用于验证 Tide Fish Condition。",
+  "item_icon": "minecraft:fishing_rod",
+  "condition": {
+    "type": "epiphany_extra:tide_fish_caught",
+    "fish": "tide:rainbow_trout",
+    "comparison": ">=",
+    "count": 1
+  },
+  "initial_state": "locked",
+  "weight": 100
+}

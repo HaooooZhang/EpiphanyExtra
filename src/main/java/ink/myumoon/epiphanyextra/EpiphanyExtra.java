@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import ink.myumoon.epiphanyextra.ars.ArsCompat;
 import ink.myumoon.epiphanyextra.origin.OriginCompat;
 import ink.myumoon.epiphanyextra.oritech.OritechCompat;
+import ink.myumoon.epiphanyextra.tide.TideCompat;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import org.slf4j.Logger;
@@ -18,6 +19,7 @@ public final class EpiphanyExtra {
         OriginCompat.init(modEventBus);
         OritechCompat.init(modEventBus);
         ArsCompat.init(modEventBus);
+        TideCompat.init(modEventBus);
         LOGGER.info("Epiphany Extra initialized");
     }
 }

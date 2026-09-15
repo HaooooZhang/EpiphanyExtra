@@ -35,3 +35,14 @@ Oritech has no Reward or aptitude integration in the current scope. Without Orit
 ## Ars Nouveau test data
 
 When Ars Nouveau is installed, the `ars_glyph_test` module checks whether the player has learned `ars_nouveau:glyph_harm` (chosen because it is not in the current player's known-glyph list). Ars mana attributes remain available through Epiphany's generic Attribute Condition and are not duplicated by this integration.
+
+## Tide test data
+
+When Tide is installed, the bundled `tide_fish_test` module checks the
+player's persistent journal catch record for `tide:carp`:
+
+1. Catch a Tide Carp with a fishing rod; the module should auto-unlock.
+2. `/journal unlock tide:carp` only marks the journal entry as unlocked and
+   does not satisfy this condition without an actual catch.
+3. A missing fish record, non-journal item, or missing Tide installation safely
+   evaluates false and never prevents EpiphanyExtra from loading.
