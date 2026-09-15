@@ -1,0 +1,17 @@
+{
+  "name": "Origins 标签匹配测试",
+  "description": "拥有 Origins origin 标签中的任意 Origin 时自动解锁。用于验证不指定 Layer 的标签查询。",
+  "item_icon": "minecraft:name_tag",
+  "condition": {
+    "type": "epiphany_extra:origins_origin",
+    "origin": "#origins:origin"
+  },
+  "initial_state": "locked",
+  "insights": [
+    {
+      "id": "epiphany_extra:origin_tag_power_test",
+      "depth": 0
+    }
+  ],
+  "weight": 90
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Origins 标签条件奖励",
+  "description": "在 Origin 标签模块中授予一个独立 Power，用于验证任意 Layer 的条件链。",
+  "item_icon": "minecraft:compass",
+  "cost": 1,
+  "reward": {
+    "type": "epiphany_extra:origins_power",
+    "power": "origins:slow_falling"
+  },
+  "reward_description": "授予 Origins Slow Falling Power",
+  "weight": 80
+}

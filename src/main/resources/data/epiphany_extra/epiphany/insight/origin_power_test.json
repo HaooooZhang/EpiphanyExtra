@@ -1,0 +1,12 @@
+{
+  "name": "Origins 精确 Power",
+  "description": "选择后授予 origins:water_breathing。重复应用应保持幂等，移除奖励时只撤销本来源。",
+  "item_icon": "minecraft:water_bucket",
+  "cost": 1,
+  "reward": {
+    "type": "epiphany_extra:origins_power",
+    "power": "origins:water_breathing"
+  },
+  "reward_description": "授予 Origins Water Breathing Power",
+  "weight": 100
+}

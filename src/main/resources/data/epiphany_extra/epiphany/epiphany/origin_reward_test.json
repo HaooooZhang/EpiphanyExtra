@@ -1,0 +1,16 @@
+{
+  "name": "Origins 兼容完成奖励",
+  "description": "完成 Origins 精确匹配测试模块后解锁。用于验证 EpiphanyReward 侧的 Origins Power。",
+  "item_icon": "minecraft:nether_star",
+  "initial_state": "locked",
+  "condition": {
+    "type": "epiphany:module_completed",
+    "module": "epiphany_extra:origin_test"
+  },
+  "reward": {
+    "type": "epiphany_extra:origins_power",
+    "power": "origins:water_vision"
+  },
+  "reward_description": "完成模块后授予 Origins Water Vision Power",
+  "weight": 100
+}

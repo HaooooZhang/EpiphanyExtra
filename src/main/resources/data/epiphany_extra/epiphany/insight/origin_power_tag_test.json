@@ -1,0 +1,12 @@
+{
+  "name": "Origins Power 标签",
+  "description": "选择后授予 #origins:avian 标签下的全部 Power。用于验证 tag reconcile。",
+  "item_icon": "minecraft:egg",
+  "cost": 1,
+  "reward": {
+    "type": "epiphany_extra:origins_power",
+    "power": "#origins:avian"
+  },
+  "reward_description": "授予 Origins Avian Power 标签中的全部 Power",
+  "weight": 90
+}
