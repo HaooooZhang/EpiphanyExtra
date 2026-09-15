@@ -31,3 +31,7 @@ When Oritech is installed, the bundled test modules exercise the Condition-only 
 2. Toggle the augment off and on; `oritech_augment_enabled_test` should only unlock while it is enabled.
 
 Oritech has no Reward or aptitude integration in the current scope. Without Oritech, these conditions safely remain false.
+
+## Ars Nouveau test data
+
+When Ars Nouveau is installed, the `ars_glyph_test` module checks whether the player has learned `ars_nouveau:glyph_harm` (chosen because it is not in the current player's known-glyph list). Ars mana attributes remain available through Epiphany's generic Attribute Condition and are not duplicated by this integration.

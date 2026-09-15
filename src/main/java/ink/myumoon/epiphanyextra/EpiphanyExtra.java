@@ -17,7 +17,7 @@ public final class EpiphanyExtra {
     public EpiphanyExtra(IEventBus modEventBus) {
         OriginCompat.init(modEventBus);
         OritechCompat.init(modEventBus);
-        ArsCompat.init();
+        ArsCompat.init(modEventBus);
         LOGGER.info("Epiphany Extra initialized");
     }
 }
