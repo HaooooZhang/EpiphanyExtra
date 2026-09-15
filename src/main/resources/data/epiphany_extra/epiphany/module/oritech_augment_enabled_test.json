@@ -1,0 +1,12 @@
+{
+  "name": "Oritech 启用植入体测试",
+  "description": "启用 Oritech Flight 植入体后自动解锁，用于验证 Oritech Condition 的 enabled 状态。",
+  "item_icon": "minecraft:feather",
+  "condition": {
+    "type": "epiphany_extra:oritech_augment",
+    "augment": "oritech:augment/flight",
+    "state": "enabled"
+  },
+  "initial_state": "locked",
+  "weight": 99
+}

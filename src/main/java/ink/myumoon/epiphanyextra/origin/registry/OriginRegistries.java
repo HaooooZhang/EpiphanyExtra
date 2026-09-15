@@ -8,6 +8,7 @@ import ink.myumoon.epiphany.registry.EpiphanyRegistries;
 import ink.myumoon.epiphanyextra.EpiphanyExtra;
 import ink.myumoon.epiphanyextra.origin.condition.OriginsOriginCondition;
 import ink.myumoon.epiphanyextra.origin.reward.OriginsPowerReward;
+import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 /** Registry bindings owned by the Origin integration. */
@@ -27,7 +28,7 @@ public final class OriginRegistries {
 
     private OriginRegistries() {}
 
-    public static void register(net.neoforged.bus.api.IEventBus bus) {
+    public static void register(IEventBus bus) {
         CONDITIONS.register(bus);
         INSIGHT_REWARDS.register(bus);
         EPIPHANY_REWARDS.register(bus);

@@ -159,6 +159,15 @@ dependencies {
     implementation "curse.maven:architectury-api-419699:5786327"
     implementation "curse.maven:ftb-library-forge-404465:8226923"
     implementation "curse.maven:ftb-teams-forge-404468:7878281"
+    implementation "curse.maven:origins-classes-neoforge-1536425:8758587"
+    compileOnly "curse.maven:oritech-1030830:8780299"
+    localRuntime "curse.maven:oritech-1030830:8780299"
+    implementation "curse.maven:athena-841890:8061947"
+    implementation "curse.maven:geckolib-388172:8350073"
+    implementation "curse.maven:ars-nouveau-401955:8721482"
+    implementation "curse.maven:curios-309927:6529130"
+    implementation "curse.maven:patchouli-306770:7730942"
+
 
     // Example mod dependency using a mod jar from ./libs with a flat dir repository
     // This maps to ./libs/coolmod-${mc_version}-${coolmod_version}.jar
