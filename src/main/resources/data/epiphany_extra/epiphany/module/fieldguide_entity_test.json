@@ -1,0 +1,11 @@
+{
+  "name": "Field Guide 生物解锁测试",
+  "description": "在 Field Guide 中解锁牛条目后自动解锁，用于验证 Field Guide Entity Condition。",
+  "item_icon": "minecraft:book",
+  "condition": {
+    "type": "epiphany_extra:fieldguide_entity_unlocked",
+    "entity": "minecraft:cow"
+  },
+  "initial_state": "locked",
+  "weight": 100
+}

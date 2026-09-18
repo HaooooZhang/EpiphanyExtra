@@ -173,6 +173,8 @@ dependencies {
     localRuntime "curse.maven:reskillable-reimagined-1170464:8700783"
     compileOnly "curse.maven:viscriptteam-1547003:8551094"
     localRuntime "curse.maven:viscriptteam-1547003:8551094"
+    compileOnly "curse.maven:field-guide-1470590:8884210"
+    localRuntime "curse.maven:field-guide-1470590:8884210"
 
     // Example mod dependency using a mod jar from ./libs with a flat dir repository
     // This maps to ./libs/coolmod-${mc_version}-${coolmod_version}.jar

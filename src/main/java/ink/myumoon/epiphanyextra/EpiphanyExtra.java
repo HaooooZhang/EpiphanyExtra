@@ -7,6 +7,7 @@ import ink.myumoon.epiphanyextra.oritech.OritechCompat;
 import ink.myumoon.epiphanyextra.tide.TideCompat;
 import ink.myumoon.epiphanyextra.reskillable.ReskillableCompat;
 import ink.myumoon.epiphanyextra.viscriptteam.ViScriptTeamCompat;
+import ink.myumoon.epiphanyextra.fieldguide.FieldGuideCompat;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import org.slf4j.Logger;
@@ -24,6 +25,7 @@ public final class EpiphanyExtra {
         TideCompat.init(modEventBus);
         ReskillableCompat.init(modEventBus);
         ViScriptTeamCompat.init(modEventBus);
+        FieldGuideCompat.init(modEventBus);
         LOGGER.info("Epiphany Extra initialized");
     }
 }
