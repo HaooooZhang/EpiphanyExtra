@@ -1,0 +1,13 @@
+{
+  "name": "ViScriptTeam 声望奖励测试",
+  "description": "选择后为 guards 阵营增加 25 点声望；移除时只撤销本 source 的增量。",
+  "item_icon": "minecraft:emerald_block",
+  "cost": 1,
+  "reward": {
+    "type": "epiphany_extra:viscript_team_standing",
+    "faction": "guards",
+    "delta": 25
+  },
+  "reward_description": "Guards 声望 +25",
+  "weight": 100
+}

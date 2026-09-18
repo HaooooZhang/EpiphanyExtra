@@ -1,0 +1,14 @@
+{
+  "name": "ViScriptTeam 队伍声望测试",
+  "description": "队伍对 guards 的有效声望达到 100 后自动解锁。",
+  "item_icon": "minecraft:golden_apple",
+  "condition": {
+    "type": "epiphany_extra:viscript_team_party_standing",
+    "faction": "guards",
+    "strategy": "min",
+    "comparison": ">=",
+    "points": 100
+  },
+  "initial_state": "locked",
+  "weight": 100
+}

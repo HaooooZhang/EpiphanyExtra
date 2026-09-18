@@ -7,6 +7,7 @@ Epiphany Extra provides optional, isolated compatibility integrations for the Ep
 - Origins: see [design/origin.md](design/origin.md)
 - Oritech: see [design/oritech.md](design/oritech.md)
 - Ars Nouveau: see [design/ars.md](design/ars.md)
+- ViScriptTeam: see [design/viscriptteam.md](design/viscriptteam.md)
 
 Each integration is kept in its own top-level source package and degrades safely when its target mod is absent.
 
@@ -46,3 +47,39 @@ player's persistent journal catch record for `tide:carp`:
    does not satisfy this condition without an actual catch.
 3. A missing fish record, non-journal item, or missing Tide installation safely
    evaluates false and never prevents EpiphanyExtra from loading.
+
+## Reskillable Reimagined test data
+
+When Reskillable Reimagined is installed, the bundled test entries exercise
+skill level reads and source-scoped level rewards:
+
+1. Raise Reskillable `mining` to level 2; `reskillable_skill_test` should
+   auto-unlock.
+2. Select `reskillable_skill_reward_test` to add one `gathering` level without
+   spending vanilla experience.
+3. Apply the same reward again to verify it does not stack for the same source;
+   removing the insight should only remove that source's recorded increase.
+
+Reskillable is optional. Without it, the condition safely returns false and the
+reward does nothing. Skill-up aptitude integration is intentionally not present:
+Reskillable 4.0.5 does not expose a stable post-level-up event.
+
+## ViScriptTeam test data
+
+When ViScriptTeam is installed, the bundled test entries exercise Party,
+personal standing, effective Party standing, and source-scoped standing rewards:
+
+1. Create or join the `expedition` Party; `viscript_team_party_test` should
+   auto-unlock.
+2. Create the `guards` faction and set personal standing to 100;
+   `viscript_team_standing_test` should auto-unlock.
+3. Put two players with different `guards` standings in `expedition` and use
+   the default `min` strategy; `viscript_team_party_standing_test` follows the
+   lowest member standing.
+4. Select `viscript_team_standing_reward_test` to add 25 standing and remove it
+   to verify source-scoped reversal.
+
+ViScriptTeam is optional. Without it, all five conditions safely return false
+and the standing reward does nothing. ViScriptTeam does not expose a stable
+standing or Party change event in the current API, so no aptitude integration
+is included.

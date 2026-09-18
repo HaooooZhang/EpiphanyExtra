@@ -147,9 +147,6 @@ dependencies {
     // We add the full version to localRuntime, not runtimeOnly, so that we do not publish a dependency on it
     // localRuntime "mezz.jei:jei-${mc_version}-neoforge:${jei_version}"
     implementation "curse.maven:epiphany-mod-1608467:8856063"
-    // Origins is an optional compatibility target. Keep it available to the
-    // compiler and local runtime without making it a runtime dependency of
-    // published EpiphanyExtra jars.
     compileOnly "curse.maven:origins-neoforge-1375372:8842849"
     localRuntime "curse.maven:origins-neoforge-1375372:8842849"
     implementation "curse.maven:jupiter-1072905:7738312"
@@ -168,12 +165,14 @@ dependencies {
     localRuntime "curse.maven:ars-nouveau-401955:8721482"
     implementation "curse.maven:curios-309927:6529130"
     implementation "curse.maven:patchouli-306770:7730942"
-    // Tide is an optional compatibility target. Keep its API visible to the
-    // compiler and add the full mod only to the local runtime for testing.
     compileOnly "curse.maven:tide-884685:8570111"
     localRuntime "curse.maven:tide-884685:8570111"
     implementation "curse.maven:cloth-config-348521:5729127"
-
+    implementation "curse.maven:viscriptquests-1548310:8879788"
+    compileOnly "curse.maven:reskillable-reimagined-1170464:8700783"
+    localRuntime "curse.maven:reskillable-reimagined-1170464:8700783"
+    compileOnly "curse.maven:viscriptteam-1547003:8551094"
+    localRuntime "curse.maven:viscriptteam-1547003:8551094"
 
     // Example mod dependency using a mod jar from ./libs with a flat dir repository
     // This maps to ./libs/coolmod-${mc_version}-${coolmod_version}.jar

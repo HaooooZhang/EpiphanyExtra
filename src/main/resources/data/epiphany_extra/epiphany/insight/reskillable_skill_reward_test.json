@@ -1,0 +1,13 @@
+{
+  "name": "Reskillable Gathering 等级奖励",
+  "description": "选择后为当前 source 增加 1 级 Gathering；移除时只撤销本 source 的增加量。",
+  "item_icon": "minecraft:wheat",
+  "cost": 1,
+  "reward": {
+    "type": "epiphany_extra:reskillable_skill_level",
+    "skill": "gathering",
+    "levels": 1
+  },
+  "reward_description": "Reskillable Gathering +1",
+  "weight": 100
+}

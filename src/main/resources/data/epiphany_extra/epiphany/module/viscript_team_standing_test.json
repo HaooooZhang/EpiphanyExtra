@@ -1,0 +1,19 @@
+{
+  "name": "ViScriptTeam 声望测试",
+  "description": "对 guards 阵营的个人声望达到 100 后自动解锁。",
+  "item_icon": "minecraft:emerald",
+  "condition": {
+    "type": "epiphany_extra:viscript_team_standing",
+    "faction": "guards",
+    "comparison": ">=",
+    "points": 100
+  },
+  "initial_state": "locked",
+  "insights": [
+    {
+      "id": "epiphany_extra:viscript_team_standing_reward_test",
+      "depth": 0
+    }
+  ],
+  "weight": 100
+}
