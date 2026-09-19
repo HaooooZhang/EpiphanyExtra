@@ -44,5 +44,6 @@ repo/
 META-INF/
 
 design/
+.agent/
 
 

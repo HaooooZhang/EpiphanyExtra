@@ -1,85 +1,37 @@
 # Epiphany Extra
 
-Epiphany Extra provides optional, isolated compatibility integrations for the Epiphany skill-tree system.
+**English** | [简体中文](README_CN.md)
 
-## Integrations
+**Epiphany Extra** is an addon for **Epiphany** that adds compatibility integrations with more third-party mods, contributing additional condition types, reward types and aptitude sources to Epiphany.
 
-- Origins: see [design/origin.md](design/origin.md)
-- Oritech: see [design/oritech.md](design/oritech.md)
-- Ars Nouveau: see [design/ars.md](design/ars.md)
-- ViScriptTeam: see [design/viscriptteam.md](design/viscriptteam.md)
+It requires Epiphany and NeoForge for Minecraft 1.21.1. Every supported mod is an optional dependency — install only the ones you want, and a missing mod simply disables its own integration.
 
-Each integration is kept in its own top-level source package and degrades safely when its target mod is absent.
+## Supported mods
 
-Origins: Classes (`origins_classes`) is covered transitively by the Origins integration: use its standard class Layer (`origins_classes:class`), Origin tag (`#origins_classes:class`) or class Power tags (for example `#origins_classes:warrior`) with the existing Origins condition/reward fields. No separate compatibility package is required.
+| Mod                    | Mod ID            | Adds                                  |
+|------------------------|-------------------|---------------------------------------|
+| Origins                | `origins`         | Conditions, rewards, aptitude sources |
+| Origins: Classes       | `origins_classes` | Conditions, rewards, aptitude sources |
+| Oritech                | `oritech`         | Conditions                            |
+| Ars Nouveau            | `ars_nouveau`     | Conditions                            |
+| Tide                   | `tide`            | Conditions                            |
+| Reskillable Reimagined | `reskillable`     | Conditions, rewards                   |
+| ViScriptTeam           | `viscript_team`   | Conditions, rewards                   |
+| ViScriptQuests         | `viscript_quests` | Conditions, rewards, aptitude sources |
+| Field Guide            | `fieldguide`      | Conditions                            |
 
-## Origins test data
+## Links
 
-When Origins is installed, the built-in `epiphany_extra` datapack entries provide a small end-to-end compatibility scenario:
+- CurseForge
+- Modrinth
+- 红石中继站 / MCZWLT
+- MCMOD
+- MCBBS 纪念版
+- [Github](https://github.com/HaooooZhang/EpiphanyExtra)
+- [Issues](https://github.com/HaooooZhang/EpiphanyExtra/issues)
+- [Discord](https://discord.gg/xSEWpdae9C)
+- Wiki
 
-1. Grant/select `origins:avian` in the `origins:origin` layer. The `Origins 精确匹配测试` module should auto-unlock, and the `Origins 标签匹配测试` module should also unlock.
-2. Select `Origins 精确 Power` to grant `origins:water_breathing`.
-3. Select `Origins Power 标签` to grant the powers in `#origins:avian`; reset or remove the insight to verify source-scoped revocation.
-4. Complete `origin_test` to unlock `Origins 兼容完成奖励`, then select it to test the Epiphany reward registry.
+## Feedback
 
-The two aptitude entries award separate values for Origin and Power grant events, including a one-time `first_reward` for Avian and Water Breathing. These entries are intentionally bundled as development/test content and should be replaced or overridden by a pack for production progression.
-
-## Oritech test data
-
-When Oritech is installed, the bundled test modules exercise the Condition-only integration:
-
-1. Install `oritech:augment/flight` and check that `oritech_augment_test` unlocks.
-2. Toggle the augment off and on; `oritech_augment_enabled_test` should only unlock while it is enabled.
-
-Oritech has no Reward or aptitude integration in the current scope. Without Oritech, these conditions safely remain false.
-
-## Ars Nouveau test data
-
-When Ars Nouveau is installed, the `ars_glyph_test` module checks whether the player has learned `ars_nouveau:glyph_harm` (chosen because it is not in the current player's known-glyph list). Ars mana attributes remain available through Epiphany's generic Attribute Condition and are not duplicated by this integration.
-
-## Tide test data
-
-When Tide is installed, the bundled `tide_fish_test` module checks the
-player's persistent journal catch record for `tide:carp`:
-
-1. Catch a Tide Carp with a fishing rod; the module should auto-unlock.
-2. `/journal unlock tide:carp` only marks the journal entry as unlocked and
-   does not satisfy this condition without an actual catch.
-3. A missing fish record, non-journal item, or missing Tide installation safely
-   evaluates false and never prevents EpiphanyExtra from loading.
-
-## Reskillable Reimagined test data
-
-When Reskillable Reimagined is installed, the bundled test entries exercise
-skill level reads and source-scoped level rewards:
-
-1. Raise Reskillable `mining` to level 2; `reskillable_skill_test` should
-   auto-unlock.
-2. Select `reskillable_skill_reward_test` to add one `gathering` level without
-   spending vanilla experience.
-3. Apply the same reward again to verify it does not stack for the same source;
-   removing the insight should only remove that source's recorded increase.
-
-Reskillable is optional. Without it, the condition safely returns false and the
-reward does nothing. Skill-up aptitude integration is intentionally not present:
-Reskillable 4.0.5 does not expose a stable post-level-up event.
-
-## ViScriptTeam test data
-
-When ViScriptTeam is installed, the bundled test entries exercise Party,
-personal standing, effective Party standing, and source-scoped standing rewards:
-
-1. Create or join the `expedition` Party; `viscript_team_party_test` should
-   auto-unlock.
-2. Create the `guards` faction and set personal standing to 100;
-   `viscript_team_standing_test` should auto-unlock.
-3. Put two players with different `guards` standings in `expedition` and use
-   the default `min` strategy; `viscript_team_party_standing_test` follows the
-   lowest member standing.
-4. Select `viscript_team_standing_reward_test` to add 25 standing and remove it
-   to verify source-scoped reversal.
-
-ViScriptTeam is optional. Without it, all five conditions safely return false
-and the standing reward does nothing. ViScriptTeam does not expose a stable
-standing or Party change event in the current API, so no aptitude integration
-is included.
+Epiphany Extra thrives on community support — contributions are very welcome! The mod is split into independent per-integration source packages, so adding one never disturbs the others.
