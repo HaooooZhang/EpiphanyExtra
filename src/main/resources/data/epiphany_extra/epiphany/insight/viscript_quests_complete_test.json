@@ -1,0 +1,12 @@
+{
+  "name": "ViScriptQuests 完成任务测试",
+  "description": "选择后强制完成 story/main 任务。",
+  "item_icon": "minecraft:knowledge_book",
+  "cost": 1,
+  "reward": {
+    "type": "epiphany_extra:viscript_quests_complete",
+    "quest": "story/main"
+  },
+  "reward_description": "完成 story/main",
+  "weight": 100
+}

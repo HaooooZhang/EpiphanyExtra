@@ -1,0 +1,15 @@
+{
+  "name": "ViScriptQuests Objective 条件测试",
+  "description": "Quest 目标达到 10 个进度后自动解锁。",
+  "item_icon": "minecraft:slime_ball",
+  "condition": {
+    "type": "epiphany_extra:viscript_quests_objective",
+    "quest": "story/main",
+    "task": "kill_slimes",
+    "objective": "kill_slime",
+    "comparison": ">=",
+    "amount": 10
+  },
+  "initial_state": "locked",
+  "weight": 100
+}

@@ -1,0 +1,12 @@
+{
+  "name": "ViScriptQuests Quest 条件测试",
+  "description": "Quest 状态达到 completed 后自动解锁。",
+  "item_icon": "minecraft:book",
+  "condition": {
+    "type": "epiphany_extra:viscript_quests_quest",
+    "quest": "story/main",
+    "status": "completed"
+  },
+  "initial_state": "locked",
+  "weight": 100
+}

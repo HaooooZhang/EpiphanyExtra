@@ -1,0 +1,12 @@
+{
+  "name": "ViScriptQuests 自定义触发测试",
+  "description": "选择后触发 unlock_gate 自定义目标；同一 source 不重复触发。",
+  "item_icon": "minecraft:redstone_torch",
+  "cost": 1,
+  "reward": {
+    "type": "epiphany_extra:viscript_quests_trigger",
+    "trigger": "unlock_gate"
+  },
+  "reward_description": "触发 unlock_gate",
+  "weight": 100
+}

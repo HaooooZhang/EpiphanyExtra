@@ -1,0 +1,12 @@
+{
+  "name": "ViScriptQuests 发放任务测试",
+  "description": "选择后发放 story/main 任务。",
+  "item_icon": "minecraft:paper",
+  "cost": 1,
+  "reward": {
+    "type": "epiphany_extra:viscript_quests_grant",
+    "quest": "story/main"
+  },
+  "reward_description": "发放 story/main",
+  "weight": 100
+}
