@@ -22,15 +22,15 @@
 
 ## 相关链接
 
-- CurseForge
-- Modrinth
-- 红石中继站 / MCZWLT
+- [CurseForge](https://www.curseforge.com/minecraft/mc-mods/epiphany-extra/)
+- [Modrinth](https://modrinth.com/mod/epiphany-extra)
+- [红石中继站 / MCZWLT](https://www.mczwlt.net/resource/7jr9kchn)
 - MCMOD
-- MCBBS 纪念版
+- [MCBBS 纪念版](https://www.mcbbs.co/thread-6357-1-1.html)
 - [Github](https://github.com/HaooooZhang/EpiphanyExtra)
 - [Issues](https://github.com/HaooooZhang/EpiphanyExtra/issues)
 - [Discord](https://discord.gg/xSEWpdae9C)
-- Wiki
+- [Wiki](https://docs.myumoon.ink/EpiphanyExtra/Overview.html)
 
 ## 反馈
 
